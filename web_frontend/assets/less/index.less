@@ -1,0 +1,169 @@
+@import "global.less";
+@import "variables.less";
+
+body{
+    #sign_in_up_container{
+        background: #1D1F2B;
+        border-radius: 20px;
+        display: flex;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 876px;
+
+        .left_container{
+            flex: 1;
+            padding: 75px 78px 71px 78px;
+
+            #form_header{
+                margin-bottom: 43px;
+                padding-left: 77px;
+                position: relative;
+                img{
+                    left: 0px;
+                    position: absolute;
+                    top: 0px;
+                }
+
+                h5{
+                    color: @white;
+                    font-family: 'Roboto-Regular';
+                    font-size: 21px;
+                    line-height: 25px;
+                    margin: 0px 0px 4px 0px;
+                }
+
+                h6{
+                    color: #6D7186;
+                    font-family: 'Roboto-Regular';
+                    font-size: 17.5108px;
+                    line-height: 21px;
+                    margin: 0px;
+                }
+            }
+
+            form{
+                .form_group{
+                    margin-bottom: 18px;
+                    label{
+                        font-family: 'Roboto-Medium';
+                        color: #6D7186;
+                        font-size: 14px;
+                        line-height: 16px;
+                        display: flex;
+                        margin-bottom: 9px;
+                    }
+                    input{
+                        background: #31354F;
+                        border-radius: 9px;
+                        border: 1px solid transparent;
+                        color: @white;
+                        font-family: 'Roboto-Regular';
+                        font-size: 16px;
+                        font-style: normal;
+                        height: 56px;
+                        line-height: 16px;
+                        outline: none;
+                        width: 100%;
+                    }
+                }
+                .form_group_container{
+                    display: flex;
+                    .form_group{
+                        flex: 1;
+
+                        &:first-child{
+                            margin-right: 7.5px;
+                        }
+
+                        &:last-child{
+                            margin-left: 7.5px;
+                        }
+                    }
+                }
+
+                >button{
+                    height: 60px;
+                    margin-top: 13px;
+                    width: 100%;
+                }
+
+                p{
+                    color: #6D7186;
+                    font-family: 'Roboto-Regular';
+                    font-size: 17.5108px;
+                    line-height: 21px;
+                    margin: 37px auto 0px auto;
+                    text-align: center;
+
+                    button{
+                        color: @blue;
+                        font-family: 'Roboto-Regular';
+                        font-size: 17.5108px;
+                        line-height: 21px;
+                    }
+                }
+
+            }
+        }
+
+        .right_container{
+            background-color: #3B3C43;
+            background-image: url("../images/right_panel_sign_up_in.svg");
+            background-position: -39px -53px;
+            background-repeat: no-repeat;
+            border-radius: 0px 20px 20px 0px;
+            position: relative;
+            width: 205px;
+
+            img{
+                left: 51px;
+                position: absolute;
+                top: 75px;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 910px){
+    body{
+        padding: 50px;
+        #sign_in_up_container{
+            width: 100%;
+            position: unset;
+            transform: unset;
+            .right_container{
+                display: none;
+            }
+       }
+    }
+}
+
+
+@media only screen and (max-width: 550px){
+    body{
+        #sign_in_up_container{
+            .left_container{
+                padding: 50px;
+                form{
+                    .form_group_container{
+                        flex-direction: column;
+                    }
+                }
+            }
+       }
+    }
+}
+
+@media only screen and (max-width: 415px){
+    body{
+        padding: 20px;
+        #sign_in_up_container{
+            .left_container{
+                padding: 20px;
+            }
+       }
+    }
+}

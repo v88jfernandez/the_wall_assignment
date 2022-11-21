@@ -1,0 +1,525 @@
+@import "global.less";
+@import "variables.less";
+
+body{
+    header{
+        align-items: center;
+        background: #1E1F25;
+        display: flex;
+        height: 62px;
+        justify-content: space-between;
+        padding: 0px 25px;
+
+        >a{
+            align-items: center;
+            color: @white;
+            display: flex;
+            font-family: 'Roboto-Regular';
+            font-size: 21px;
+            line-height: 25px;
+            text-decoration: none;
+            
+            span.the_wall_logo{
+                background-image: url(../images/the_wall_small_logo.svg);
+                display: flex;
+                height: 28px;
+                margin-right: 10px;;
+                width: 28px;
+            }
+        }
+
+        p{
+            align-items: center;
+            color: @white;
+            display: flex;
+            font-family: 'Roboto-Regular';
+            font-size: 14px;
+            line-height: 16px;
+            margin: 0px;
+
+            a{
+                align-items: center;
+                color: @white;
+                display: flex;
+                font-family: 'Roboto-Regular';
+                font-size: 14px;
+                line-height: 16px;
+                margin-left: 26px;
+                padding-left: 26px;
+                position: relative;
+                text-decoration: none;
+
+                &:before{
+                    background-color: #3A3C46;
+                    content: "";
+                    height: 62px;
+                    left: 0px;
+                    position: absolute;
+                    top: -23px;
+                    width: 1px;
+                }
+
+                span.logout_icon{
+                    background-image: url(../images/the_icon_sprite.svg);
+                    background-position: 13px;
+                    display: flex;
+                    height: 13px;
+                    margin-right: 9px;
+                    width: 13px;
+                }
+            }
+        }
+    }
+
+    main{
+        margin: 49px auto;
+        width: 978px;
+        h4{
+            color: @white;
+            font-family: 'Roboto-Regular';
+            font-size: 21px;
+            line-height: 25px;
+            margin: 0px 0px 7px 0px;
+            opacity: 0.9;
+        }
+        h1{
+            color: #6D7186;
+            font-family: 'Roboto-Regular';
+            font-size: 17.5108px;
+            line-height: 21px;
+            margin: 0px 0px 55px 0px;
+            opacity: 0.9;
+        }
+
+        #create_message_form, .create_comment_form, .update_message_form{
+            position: relative;
+
+            textarea{
+                background: #3A3C46;
+                border-radius: 10px;
+                border: 1px solid transparent;
+                color: @white;
+                font-family: 'Roboto-Regular';
+                font-size: 17.5108px;
+                height: 58px;
+                line-height: 25px;
+                opacity: 0.9;
+                outline: none;
+                overflow: hidden;
+                padding: 10px;
+                resize: none;
+                width: ~"calc(100% - 20px)";
+
+                &::placeholder{
+                    position: absolute;
+                    top: 28px;
+                }
+
+                &:focus{
+                    border: 1px solid @blue;
+                }
+
+            }
+
+            button{
+                align-items: center;
+                color: @white;
+                display: flex;
+                font-family: 'Roboto-Medium';
+                font-size: 14px;
+                height: 38px;
+                justify-content: center;;
+                line-height: 40px;
+                opacity: 0.9;
+                position: absolute;
+                right: 19px;
+                top: 20px;
+                width: 100px;
+
+
+                &:hover{
+                    background-color: #0050C8;
+                }
+            }
+        }
+
+
+        #recent_forums_container{
+            margin-top: 57px;
+            h5{
+                color: @white;
+                font-family: 'Roboto-Regular';
+                font-size: 16px;
+                line-height: 19px;
+                opacity: 0.9;
+            }
+
+            #no_post_yet{
+                align-items: center;
+                background: #2C2D34;
+                border-radius: 9px;
+                border: 1px dashed #6D6E75;
+                color: @white;
+                display: flex;
+                font-family: 'Roboto-Regular';
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                height: 87px;
+                justify-content: center;
+                line-height: 19px;
+                opacity: 0.9;
+            }
+
+            #messages_list{
+                list-style: none;
+                margin: 0px;
+                padding: 0px;
+
+                li{
+                    background: #1E1F25;
+                    border-radius: 10px;
+                    margin-bottom: 30px;
+                    padding: 22px 30px 28px 30px;
+
+                    &:last-child{
+                        margin-bottom: 0px;;
+                    }
+
+                    &:hover{
+                        >.item_footer{
+                            .actions_container{
+                                display: flex;
+                            }   
+                        }
+                    }
+
+                    &.update_item{
+                        .update_message_form{
+                            margin-bottom: 30px;
+                        }
+
+                        .item_footer{
+                            display: none;
+                        }
+                    }
+
+                    p{
+                        color: @white;
+                        font-family: 'Roboto-Regular';
+                        font-size: 16px;
+                        font-style: italic;
+                        line-height: 25px;
+                        margin: 0px;
+                        opacity: 0.9;
+                    }
+    
+                    .item_footer{
+                        align-items: end;
+                        display: flex;
+                        height: 29px;
+                        justify-content: space-between;
+                        margin-bottom: 30px;
+
+                        .author_details{
+                            color: @purple;
+                            font-family: 'Roboto-Regular';
+                            font-size: 14px;
+                            line-height: 16px;
+                            opacity: 0.9;
+
+                            span{
+                                position: relative;
+                                
+                                &:first-child{
+                                    margin-right: 36px;
+
+                                    &:after{
+                                        background-color: @purple;
+                                        content: "";
+                                        height: 15px;
+                                        position: absolute;
+                                        right: -20px;
+                                        width: 1px;
+                                    }
+                                }
+                            }
+                        }
+    
+                        .actions_container{
+                            display: none;
+
+                            .edit_message_button, .edit_comment_button, .delete_message_button, .delete_comment_button{
+                                align-items: center;
+                                background: #32333C;
+                                border-radius: 4px;
+                                border: 1px solid #606066;
+                                display: flex;
+                                height: 29px;
+                                justify-content: center;
+                                width: 29px;
+                                span{
+                                    display: inline-block;
+                                }
+
+
+                                &:hover{
+                                    background: #9999FF;
+                                    border: 1px solid #FFFFFF;
+                                }
+                            }
+
+
+                            .edit_message_button, .edit_comment_button{
+
+                                &:hover{
+                                    .edit_icon{
+                                        background-position: -42px 0px;
+                                    }
+                                }
+                                .edit_icon{
+                                    background-image: url("../images/the_wall_sprite_icon.svg");
+                                    background-position: 0px 0px;
+                                    background-repeat: no-repeat;
+                                    height: 12px;
+                                    width: 12px;
+                                }
+                            }
+    
+                            .delete_item_container{
+                                align-items: center;
+                                background: #32333C;
+                                border-radius: 4px;
+                                border: 1px solid transparent;
+                                display: flex;
+                                justify-content: space-between;
+                                margin-left: 6px;
+
+                                .delete_message_button, .delete_comment_button{
+
+                                    &:hover{
+                                        .delete_icon{
+                                            background-position: -63px 0px;
+                                        }
+                                    }
+                                    .delete_icon{
+                                        background-image: url("../images/the_wall_sprite_icon.svg");
+                                        background-position: -21px 0px;
+                                        background-repeat: no-repeat;
+                                        height: 12px;
+                                        width: 12px;
+                                    }
+                                }
+
+                                &.show{
+                                    border: 1px solid #606066;
+                                    form{
+                                        display: flex;
+                                    }
+
+                                    .delete_message_button, .delete_comment_button{
+                                        border-bottom: none;
+                                        border-left: none;
+                                        border-radius: 4px 0px 0px 4px;
+                                        border-top: none;
+                                    }
+                                }
+    
+                                .delete_message_form{
+                                    display: none;
+                                    padding: 8px;
+                                    
+                                    span{
+                                        color: @white;
+                                        font-family: 'Roboto-Bold';
+                                        font-size: 10px;
+                                        line-height: 12px;
+                                    }
+    
+                                    button{
+                                        font-family: 'Roboto-Bold';
+                                        font-size: 10px;
+                                        line-height: 12px;
+                                        margin-left: 8px;
+                                        &[type="button"]{
+                                            color: #6D7186;
+                                        }
+                                        &[type="submit"]{
+                                            color: @purple;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    .create_comment_form{
+                        margin-left: 15px;
+                    }
+    
+                    .comments_list{
+                        list-style: none;
+                        margin: 0px;
+                        padding: 0px 0px 0px 15px;
+
+                        li{
+                            border-bottom: 1px solid #3F404A;
+                            border-radius: 0px;
+                            margin: 0px;
+                            padding: 24px 0px 25px 0px;
+
+                            &:last-child{
+                                border: none;
+                                padding-bottom: 0px;
+                            }
+
+                            .item_footer{
+                                margin-bottom: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1030px){
+    body{
+        main, header{
+            padding: 0px 25px;
+            width: 1035px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 375px){
+    body{
+        header{
+            padding: 3px 20px;
+            width: ~"calc(100% - 40px)";
+            p{
+                span{
+                    display: none;
+                }
+
+                a{
+                    padding-left: 0px;
+                    margin: 0px;
+
+                    &:before{
+                        display: none;
+                    }
+
+                    .logout_icon{
+                        margin-right: 0px !important;
+                    }
+                }
+            }
+        }
+
+        main{
+            padding: 0px;
+            width: ~"calc(100% - 70px)";
+            margin: 32px auto;
+
+            h4{
+                font-size: 20px;
+                line-height: 23px;
+                margin: 0px 0px 5px 0px;
+            }
+
+            h1{
+                font-size: 16px;
+                line-height: 19px;
+                margin: 0px 0px 17px 0px;
+            }
+
+            #create_message_form, .create_comment_form, .update_message_form{
+                margin-left: 0px !important;
+                textarea{
+                    font-size: 14px;
+                    line-height: 25px;
+                    height: 89px;
+                }
+
+                button{
+                    top: 63px;
+                }
+            }
+
+            #recent_forums_container{
+                margin-top: 23px;
+                h5{
+                    margin: 0px 0px 9px 0px;
+                }
+
+                #messages_list{
+                    li{
+                        padding: 17px 20px 18px 20px;
+
+                        p{
+                            font-size: 14px;
+                            line-height: 18px;
+                        }
+
+                        .item_footer{
+                            height: auto;
+                            margin-bottom: 13px;
+                            
+
+                           
+                            .author_details{
+                                display: flex;
+                                flex-direction: column;
+
+                                span{
+                                    &:after{
+                                        display: none;
+                                    }
+
+                                    &:first-child{
+                                        font-size: 12px;
+                                        line-height: 14px;
+                                        margin-right: 0px;
+                                    }
+
+                                    &:last-child{
+                                        font-size: 10px;
+                                        line-height: 12px;
+                                    }
+                                }
+                            }
+
+                            .actions_container{
+                                display: flex;
+                            }
+                        }   
+
+                        .comments_list{
+                            padding: 0px 0px 0px 10px;
+
+                            li{
+                                padding: 13px 0px 7px 0px;
+
+                                .item_footer{
+                                    align-items: start;
+
+                                    .author_details{
+                                        font-size: 12px;
+                                        line-height: 14px;
+                                        margin-right: 0px;
+                                        margin-top: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+

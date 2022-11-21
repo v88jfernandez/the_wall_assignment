@@ -1,0 +1,501 @@
+/* Fonts */
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+}
+/* Colors */
+body {
+  background-color: #2C2D34;
+  margin: 0px;
+}
+body .hidden {
+  display: none !important;
+}
+body .primary_button {
+  background-color: #00a3ff;
+  border-radius: 9px;
+  border: none;
+  color: #ffffff;
+  font-family: 'Roboto-Bold';
+  font-size: 21px;
+  line-height: 25px;
+  outline: none;
+}
+body .normal_button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0px;
+}
+body .error_input {
+  border: 1px solid #eb5757 !important;
+}
+body button {
+  cursor: pointer;
+}
+body input {
+  padding: 0px 20px;
+  width: calc(100% - 42px) !important;
+}
+body input:focus {
+  border: 1px solid #00a3ff !important;
+}
+body header {
+  align-items: center;
+  background: #1E1F25;
+  display: flex;
+  height: 62px;
+  justify-content: space-between;
+  padding: 0px 25px;
+}
+body header > a {
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+  font-family: 'Roboto-Regular';
+  font-size: 21px;
+  line-height: 25px;
+  text-decoration: none;
+}
+body header > a span.the_wall_logo {
+  background-image: url(../images/the_wall_small_logo.svg);
+  display: flex;
+  height: 28px;
+  margin-right: 10px;
+  width: 28px;
+}
+body header p {
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+  font-family: 'Roboto-Regular';
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0px;
+}
+body header p a {
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+  font-family: 'Roboto-Regular';
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 26px;
+  padding-left: 26px;
+  position: relative;
+  text-decoration: none;
+}
+body header p a:before {
+  background-color: #3A3C46;
+  content: "";
+  height: 62px;
+  left: 0px;
+  position: absolute;
+  top: -23px;
+  width: 1px;
+}
+body header p a span.logout_icon {
+  background-image: url(../images/the_icon_sprite.svg);
+  background-position: 13px;
+  display: flex;
+  height: 13px;
+  margin-right: 9px;
+  width: 13px;
+}
+body main {
+  margin: 49px auto;
+  width: 978px;
+}
+body main h4 {
+  color: #ffffff;
+  font-family: 'Roboto-Regular';
+  font-size: 21px;
+  line-height: 25px;
+  margin: 0px 0px 7px 0px;
+  opacity: 0.9;
+}
+body main h1 {
+  color: #6D7186;
+  font-family: 'Roboto-Regular';
+  font-size: 17.5108px;
+  line-height: 21px;
+  margin: 0px 0px 55px 0px;
+  opacity: 0.9;
+}
+body main #create_message_form,
+body main .create_comment_form,
+body main .update_message_form {
+  position: relative;
+}
+body main #create_message_form textarea,
+body main .create_comment_form textarea,
+body main .update_message_form textarea {
+  background: #3A3C46;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  color: #ffffff;
+  font-family: 'Roboto-Regular';
+  font-size: 17.5108px;
+  height: 58px;
+  line-height: 25px;
+  opacity: 0.9;
+  outline: none;
+  overflow: hidden;
+  padding: 10px;
+  resize: none;
+  width: calc(100% - 20px);
+}
+body main #create_message_form textarea::placeholder,
+body main .create_comment_form textarea::placeholder,
+body main .update_message_form textarea::placeholder {
+  position: absolute;
+  top: 28px;
+}
+body main #create_message_form textarea:focus,
+body main .create_comment_form textarea:focus,
+body main .update_message_form textarea:focus {
+  border: 1px solid #00a3ff;
+}
+body main #create_message_form button,
+body main .create_comment_form button,
+body main .update_message_form button {
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+  font-family: 'Roboto-Medium';
+  font-size: 14px;
+  height: 38px;
+  justify-content: center;
+  line-height: 40px;
+  opacity: 0.9;
+  position: absolute;
+  right: 19px;
+  top: 20px;
+  width: 100px;
+}
+body main #create_message_form button:hover,
+body main .create_comment_form button:hover,
+body main .update_message_form button:hover {
+  background-color: #0050C8;
+}
+body main #recent_forums_container {
+  margin-top: 57px;
+}
+body main #recent_forums_container h5 {
+  color: #ffffff;
+  font-family: 'Roboto-Regular';
+  font-size: 16px;
+  line-height: 19px;
+  opacity: 0.9;
+}
+body main #recent_forums_container #no_post_yet {
+  align-items: center;
+  background: #2C2D34;
+  border-radius: 9px;
+  border: 1px dashed #6D6E75;
+  color: #ffffff;
+  display: flex;
+  font-family: 'Roboto-Regular';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  height: 87px;
+  justify-content: center;
+  line-height: 19px;
+  opacity: 0.9;
+}
+body main #recent_forums_container #messages_list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+body main #recent_forums_container #messages_list li {
+  background: #1E1F25;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding: 22px 30px 28px 30px;
+}
+body main #recent_forums_container #messages_list li:last-child {
+  margin-bottom: 0px;
+}
+body main #recent_forums_container #messages_list li:hover > .item_footer .actions_container {
+  display: flex;
+}
+body main #recent_forums_container #messages_list li.update_item .update_message_form {
+  margin-bottom: 30px;
+}
+body main #recent_forums_container #messages_list li.update_item .item_footer {
+  display: none;
+}
+body main #recent_forums_container #messages_list li p {
+  color: #ffffff;
+  font-family: 'Roboto-Regular';
+  font-size: 16px;
+  font-style: italic;
+  line-height: 25px;
+  margin: 0px;
+  opacity: 0.9;
+}
+body main #recent_forums_container #messages_list li .item_footer {
+  align-items: end;
+  display: flex;
+  height: 29px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+body main #recent_forums_container #messages_list li .item_footer .author_details {
+  color: #a3a3ff;
+  font-family: 'Roboto-Regular';
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 0.9;
+}
+body main #recent_forums_container #messages_list li .item_footer .author_details span {
+  position: relative;
+}
+body main #recent_forums_container #messages_list li .item_footer .author_details span:first-child {
+  margin-right: 36px;
+}
+body main #recent_forums_container #messages_list li .item_footer .author_details span:first-child:after {
+  background-color: #a3a3ff;
+  content: "";
+  height: 15px;
+  position: absolute;
+  right: -20px;
+  width: 1px;
+}
+body main #recent_forums_container #messages_list li .item_footer .actions_container {
+  display: none;
+}
+body main #recent_forums_container #messages_list li .item_footer .actions_container .edit_message_button,
+body main #recent_forums_container #messages_list li .item_footer .actions_container .edit_comment_button,
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_message_button,
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_comment_button {
+  align-items: center;
+  background: #32333C;
+  border-radius: 4px;
+  border: 1px solid #606066;
+  display: flex;
+  height: 29px;
+  justify-content: center;
+  width: 29px;
+}
+body main #recent_forums_container #messages_list li .item_footer .actions_container .edit_message_button span,
+body main #recent_forums_container #messages_list li .item_footer .actions_container .edit_comment_button span,
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_message_button span,
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_comment_button span {
+  display: inline-block;
+}
+body main #recent_forums_container #messages_list li .item_footer .actions_container .edit_message_button:hover,
+body main #recent_forums_container #messages_list li .item_footer .actions_container .edit_comment_button:hover,
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_message_button:hover,
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_comment_button:hover {
+  background: #9999FF;
+  border: 1px solid #FFFFFF;
+}
+body main #recent_forums_container #messages_list li .item_footer .actions_container .edit_message_button:hover .edit_icon,
+body main #recent_forums_container #messages_list li .item_footer .actions_container .edit_comment_button:hover .edit_icon {
+  background-position: -42px 0px;
+}
+body main #recent_forums_container #messages_list li .item_footer .actions_container .edit_message_button .edit_icon,
+body main #recent_forums_container #messages_list li .item_footer .actions_container .edit_comment_button .edit_icon {
+  background-image: url("../images/the_wall_sprite_icon.svg");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  height: 12px;
+  width: 12px;
+}
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_item_container {
+  align-items: center;
+  background: #32333C;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 6px;
+}
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_item_container .delete_message_button:hover .delete_icon,
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_item_container .delete_comment_button:hover .delete_icon {
+  background-position: -63px 0px;
+}
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_item_container .delete_message_button .delete_icon,
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_item_container .delete_comment_button .delete_icon {
+  background-image: url("../images/the_wall_sprite_icon.svg");
+  background-position: -21px 0px;
+  background-repeat: no-repeat;
+  height: 12px;
+  width: 12px;
+}
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_item_container.show {
+  border: 1px solid #606066;
+}
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_item_container.show form {
+  display: flex;
+}
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_item_container.show .delete_message_button,
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_item_container.show .delete_comment_button {
+  border-bottom: none;
+  border-left: none;
+  border-radius: 4px 0px 0px 4px;
+  border-top: none;
+}
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_item_container .delete_message_form {
+  display: none;
+  padding: 8px;
+}
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_item_container .delete_message_form span {
+  color: #ffffff;
+  font-family: 'Roboto-Bold';
+  font-size: 10px;
+  line-height: 12px;
+}
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_item_container .delete_message_form button {
+  font-family: 'Roboto-Bold';
+  font-size: 10px;
+  line-height: 12px;
+  margin-left: 8px;
+}
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_item_container .delete_message_form button[type="button"] {
+  color: #6D7186;
+}
+body main #recent_forums_container #messages_list li .item_footer .actions_container .delete_item_container .delete_message_form button[type="submit"] {
+  color: #a3a3ff;
+}
+body main #recent_forums_container #messages_list li .create_comment_form {
+  margin-left: 15px;
+}
+body main #recent_forums_container #messages_list li .comments_list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px 0px 0px 15px;
+}
+body main #recent_forums_container #messages_list li .comments_list li {
+  border-bottom: 1px solid #3F404A;
+  border-radius: 0px;
+  margin: 0px;
+  padding: 24px 0px 25px 0px;
+}
+body main #recent_forums_container #messages_list li .comments_list li:last-child {
+  border: none;
+  padding-bottom: 0px;
+}
+body main #recent_forums_container #messages_list li .comments_list li .item_footer {
+  margin-bottom: 0px;
+}
+@media only screen and (max-width: 1030px) {
+  body main,
+  body header {
+    padding: 0px 25px;
+    width: 1035px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  body header {
+    padding: 3px 20px;
+    width: calc(100% - 40px);
+  }
+  body header p span {
+    display: none;
+  }
+  body header p a {
+    padding-left: 0px;
+    margin: 0px;
+  }
+  body header p a:before {
+    display: none;
+  }
+  body header p a .logout_icon {
+    margin-right: 0px !important;
+  }
+  body main {
+    padding: 0px;
+    width: calc(100% - 70px);
+    margin: 32px auto;
+  }
+  body main h4 {
+    font-size: 20px;
+    line-height: 23px;
+    margin: 0px 0px 5px 0px;
+  }
+  body main h1 {
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0px 0px 17px 0px;
+  }
+  body main #create_message_form,
+  body main .create_comment_form,
+  body main .update_message_form {
+    margin-left: 0px !important;
+  }
+  body main #create_message_form textarea,
+  body main .create_comment_form textarea,
+  body main .update_message_form textarea {
+    font-size: 14px;
+    line-height: 25px;
+    height: 89px;
+  }
+  body main #create_message_form button,
+  body main .create_comment_form button,
+  body main .update_message_form button {
+    top: 63px;
+  }
+  body main #recent_forums_container {
+    margin-top: 23px;
+  }
+  body main #recent_forums_container h5 {
+    margin: 0px 0px 9px 0px;
+  }
+  body main #recent_forums_container #messages_list li {
+    padding: 17px 20px 18px 20px;
+  }
+  body main #recent_forums_container #messages_list li p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  body main #recent_forums_container #messages_list li .item_footer {
+    height: auto;
+    margin-bottom: 13px;
+  }
+  body main #recent_forums_container #messages_list li .item_footer .author_details {
+    display: flex;
+    flex-direction: column;
+  }
+  body main #recent_forums_container #messages_list li .item_footer .author_details span:after {
+    display: none;
+  }
+  body main #recent_forums_container #messages_list li .item_footer .author_details span:first-child {
+    font-size: 12px;
+    line-height: 14px;
+    margin-right: 0px;
+  }
+  body main #recent_forums_container #messages_list li .item_footer .author_details span:last-child {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  body main #recent_forums_container #messages_list li .item_footer .actions_container {
+    display: flex;
+  }
+  body main #recent_forums_container #messages_list li .comments_list {
+    padding: 0px 0px 0px 10px;
+  }
+  body main #recent_forums_container #messages_list li .comments_list li {
+    padding: 13px 0px 7px 0px;
+  }
+  body main #recent_forums_container #messages_list li .comments_list li .item_footer {
+    align-items: start;
+  }
+  body main #recent_forums_container #messages_list li .comments_list li .item_footer .author_details {
+    font-size: 12px;
+    line-height: 14px;
+    margin-right: 0px;
+    margin-top: 5px;
+  }
+}

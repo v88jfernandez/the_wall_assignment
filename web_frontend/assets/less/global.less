@@ -1,0 +1,47 @@
+@import "variables.less";
+
+body{
+    background-color: #2C2D34;
+    margin: 0px;
+
+    .hidden{
+        display: none !important;
+    }
+
+    .primary_button{
+        background-color: @blue;
+        border-radius: 9px;
+        border: none;
+        color: @white;
+        font-family: 'Roboto-Bold';
+        font-size: 21px;
+        line-height: 25px;
+        outline: none;
+    }
+
+    .normal_button{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0px;
+    }
+
+    .error_input{
+        border: 1px solid @red !important;
+    }
+
+    button{
+        cursor: pointer;
+    }
+
+    input{
+        padding: 0px 20px;
+        width: ~"calc(100% - 42px)" !important;
+
+        &:focus{
+            border: 1px solid @blue !important;
+        }
+    }
+}
+
+

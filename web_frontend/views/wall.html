@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico"/>
+    <meta name="description" content="Adding of message and reply of the wall assignment">
+    <meta name="author" content="Jerwin A. Fernandez">
+    <title>The Wall | Wall Page</title>
+
+    <!-- Less -->
+    <link rel="stylesheet" href="../assets/css/wall.css"/>
+</head>
+<body>
+ 
+    <header>
+        <a href="wall.html"><span class="the_wall_logo"></span> THE WALL</a>
+        <p><span>Jerwin Fernandez</span> <a href="index.html"><span class="logout_icon"></span> <span>Logout</span></a></p>
+    </header>
+
+    <main>
+        <h4>Hello Jerwin,</h4>
+        <h1>Welcome to V88 Forum Dashboard</h1>
+
+        <form action="#" method="post" id="create_message_form">
+            <textarea name="message" placeholder="Post your Topic..."></textarea>
+            <button type="submit" class="primary_button">Post</button>
+        </form>
+
+        <div id="recent_forums_container">
+            <h5>Recent Forums</h5>
+
+            <!-- No post placeholder -->
+            <div id="no_post_yet">No post yet.</div>
+
+            <ul id="messages_list"></ul>
+        </div>
+    </main>
+
+    <!-- Clones -->
+    <div class="hidden">
+        <ul id="clones_list">
+            <!-- Message Clone -->
+            <li data-message-id="0">
+                <p>This is a test message!</p>
+
+                <div class="item_footer">
+                    <div class="author_details">
+                        <span>Jerwin F. (few seconds ago)</span>
+                        <span class="responses">0 Responses</span>
+                    </div>
+
+                    <div class="actions_container">
+                        <button type="button" class="edit_message_button">
+                            <span class="edit_icon"></span>
+                        </button>
+                        <div class="delete_item_container">
+                            <button type="button" class="delete_message_button">
+                                <span class="delete_icon"></span>
+                            </button>
+
+                            <form action="#" method="post" class="delete_message_form">
+                                <span>Confirm Delete?</span>
+                                <button type="button" class="normal_button close_confirm_delete">No</button>
+                                <button type="submit" class="normal_button">Yes</button>
+                            </form>
+                        </div>
+                    </div> 
+                </div>
+
+                <form action="#" method="post" class="create_comment_form">
+                    <textarea name="comment" placeholder="Post your Topic..."></textarea>
+                    <button type="submit" class="primary_button">Post</button>
+                </form>
+
+                <ul class="comments_list"></ul>
+            </li>
+            <!-- Comment Clone -->
+            <li data-comment-id="0">
+                <p>This is a test comment!</p>
+
+                <div class="item_footer">
+                    <span class="author_details">Jerwin F. (few seconds ago)</span>
+
+                    <div class="actions_container">
+                        <button type="button" class="edit_comment_button">
+                            <span class="edit_icon"></span>
+                        </button>
+                        <div class="delete_item_container">
+                            <button type="button" class="delete_comment_button">
+                                <span class="delete_icon"></span>
+                            </button>
+
+                            <form action="#" method="post" class="delete_message_form">
+                                <span>Confirm Delete?</span>
+                                <button type="button" class="normal_button close_confirm_delete">No</button>
+                                <button type="submit" class="normal_button">Yes</button>
+                            </form>
+                        </div>
+                    </div> 
+                </div> 
+            </li>
+        </ul>
+
+        <form action="#" method="post" class="update_message_form">
+            <textarea name="message" placeholder="Update your Topic..."></textarea>
+            <button type="submit" class="primary_button">Save</button>
+        </form>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./../assets/js/wall.js"></script>
+    <script src="./../assets/js/global.js"></script>
+</body>
+</html>
