@@ -1,4 +1,4 @@
-@import "variables.less";
+@import url("variables.less");
 
 body{
     background-color: #2C2D34;
@@ -13,10 +13,14 @@ body{
         border-radius: 9px;
         border: none;
         color: @white;
-        font-family: 'Roboto-Bold';
+        font-family: "Roboto-Bold";
         font-size: 21px;
         line-height: 25px;
         outline: none;
+
+        &:hover{
+            background-color: #0050C8;
+        }
     }
 
     .normal_button{
@@ -36,12 +40,9 @@ body{
 
     input{
         padding: 0px 20px;
-        width: ~"calc(100% - 42px)" !important;
 
         &:focus{
             border: 1px solid @blue !important;
         }
     }
 }
-
-

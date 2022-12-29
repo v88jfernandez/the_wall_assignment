@@ -1,5 +1,5 @@
-@import "global.less";
-@import "variables.less";
+@import url("variables.less");
+@import url("global.less");
 
 body{
     header{
@@ -11,31 +11,29 @@ body{
         padding: 0px 25px;
 
         >a{
-            align-items: center;
             color: @white;
             display: flex;
             font-family: 'Roboto-Regular';
             font-size: 21px;
             line-height: 25px;
             text-decoration: none;
-            
-            span.the_wall_logo{
-                background-image: url(../images/the_wall_small_logo.svg);
+
+            span{
+                background-image: url("../images/the_wall_small_logo.svg");
                 display: flex;
                 height: 28px;
-                margin-right: 10px;;
+                margin-right: 10px;
                 width: 28px;
             }
         }
 
-        p{
-            align-items: center;
-            color: @white;
+        div{
             display: flex;
+            align-items: center;
             font-family: 'Roboto-Regular';
             font-size: 14px;
             line-height: 16px;
-            margin: 0px;
+            color: @white;
 
             a{
                 align-items: center;
@@ -59,13 +57,15 @@ body{
                     width: 1px;
                 }
 
-                span.logout_icon{
-                    background-image: url(../images/the_icon_sprite.svg);
-                    background-position: 13px;
-                    display: flex;
-                    height: 13px;
-                    margin-right: 9px;
-                    width: 13px;
+                span{
+                    &.logout_icon{
+                        background-image: url("../images/the_icon_sprite.svg");
+                        background-position: 13px;
+                        display: flex;
+                        height: 13px;
+                        margin-right: 9px;
+                        width: 13px;
+                    }
                 }
             }
         }
@@ -74,25 +74,31 @@ body{
     main{
         margin: 49px auto;
         width: 978px;
+    
+
         h4{
             color: @white;
             font-family: 'Roboto-Regular';
             font-size: 21px;
             line-height: 25px;
-            margin: 0px 0px 7px 0px;
-            opacity: 0.9;
+            margin-bottom: 0px;
+            margin-top: 2px;
         }
+
         h1{
             color: #6D7186;
             font-family: 'Roboto-Regular';
-            font-size: 17.5108px;
             line-height: 21px;
-            margin: 0px 0px 55px 0px;
-            opacity: 0.9;
+            font-size: 17.5108px;
+            margin-top: 7px;
+            margin-bottom: 56px;
         }
 
         #create_message_form, .create_comment_form, .update_message_form{
             position: relative;
+            &.update_message_form{
+                margin-bottom: 20px;
+            }
 
             textarea{
                 background: #3A3C46;
@@ -101,182 +107,152 @@ body{
                 color: @white;
                 font-family: 'Roboto-Regular';
                 font-size: 17.5108px;
-                height: 58px;
+                height: 62px;
                 line-height: 25px;
-                opacity: 0.9;
                 outline: none;
-                overflow: hidden;
-                padding: 10px;
+                padding: 8px 18px;
                 resize: none;
-                width: ~"calc(100% - 20px)";
-
-                &::placeholder{
-                    position: absolute;
-                    top: 28px;
-                }
+                width: ~"calc(100% - 37px)";
 
                 &:focus{
-                    border: 1px solid @blue;
+                    border: 1px solid #00A3FF;
                 }
-
             }
 
             button{
-                align-items: center;
-                color: @white;
-                display: flex;
+                position: absolute;                
+                width: 100px;
+                height: 38px;
                 font-family: 'Roboto-Medium';
                 font-size: 14px;
-                height: 38px;
-                justify-content: center;;
-                line-height: 40px;
-                opacity: 0.9;
-                position: absolute;
-                right: 19px;
+                right: 20px;
                 top: 20px;
-                width: 100px;
-
-
-                &:hover{
-                    background-color: #0050C8;
-                }
             }
         }
 
 
         #recent_forums_container{
-            margin-top: 57px;
+            margin-top: 53px;
+
             h5{
-                color: @white;
                 font-family: 'Roboto-Regular';
                 font-size: 16px;
                 line-height: 19px;
-                opacity: 0.9;
+                color: @white;
+                margin-bottom: 17px;
             }
 
             #no_post_yet{
-                align-items: center;
                 background: #2C2D34;
-                border-radius: 9px;
                 border: 1px dashed #6D6E75;
-                color: @white;
-                display: flex;
+                border-radius: 9px;
                 font-family: 'Roboto-Regular';
                 font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                height: 87px;
-                justify-content: center;
                 line-height: 19px;
-                opacity: 0.9;
+                color: @white;
+                height: 89px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             #messages_list{
                 list-style: none;
                 margin: 0px;
                 padding: 0px;
-
                 li{
-                    background: #1E1F25;
-                    border-radius: 10px;
+                    background-color: #1E1F25;
+                    padding: 22px 30px 30px 30px;
                     margin-bottom: 30px;
-                    padding: 22px 30px 28px 30px;
+                    border-radius: 10px;
 
                     &:last-child{
-                        margin-bottom: 0px;;
+                        margin-bottom: 0px;
                     }
 
                     &:hover{
                         >.item_footer{
                             .actions_container{
-                                display: flex;
-                            }   
+                                display: flex !important;
+                            }
                         }
                     }
 
                     &.update_item{
-                        .update_message_form{
-                            margin-bottom: 30px;
-                        }
-
                         .item_footer{
                             display: none;
                         }
                     }
 
                     p{
-                        color: @white;
                         font-family: 'Roboto-Regular';
-                        font-size: 16px;
                         font-style: italic;
+                        font-size: 16px;
                         line-height: 25px;
-                        margin: 0px;
-                        opacity: 0.9;
+                        color: @white;
+                        margin: 0px
                     }
-    
+
                     .item_footer{
                         align-items: end;
                         display: flex;
-                        height: 29px;
+                        height: 27px;
                         justify-content: space-between;
-                        margin-bottom: 30px;
+                        margin-bottom: 32px;
 
                         .author_details{
                             color: @purple;
                             font-family: 'Roboto-Regular';
                             font-size: 14px;
                             line-height: 16px;
-                            opacity: 0.9;
-
                             span{
                                 position: relative;
-                                
+
                                 &:first-child{
-                                    margin-right: 36px;
+                                    margin-right: 30px;
 
                                     &:after{
-                                        background-color: @purple;
+                                        background-color: #a3a3ff;
                                         content: "";
                                         height: 15px;
                                         position: absolute;
-                                        right: -20px;
+                                        right: -17px;
+                                        top: 0px;
                                         width: 1px;
                                     }
                                 }
+                                &.responses{
+                                    color: @purple;
+                                    font-family: 'Roboto-Regular';
+                                    font-size: 14px;
+                                    line-height: 16px;
+                                }
                             }
                         }
-    
+
                         .actions_container{
                             display: none;
 
                             .edit_message_button, .edit_comment_button, .delete_message_button, .delete_comment_button{
                                 align-items: center;
                                 background: #32333C;
-                                border-radius: 4px;
+                                border-radius: 4px;  
                                 border: 1px solid #606066;
                                 display: flex;
                                 height: 29px;
                                 justify-content: center;
                                 width: 29px;
+                                
                                 span{
                                     display: inline-block;
                                 }
 
-
                                 &:hover{
-                                    background: #9999FF;
-                                    border: 1px solid #FFFFFF;
+                                    background-color: @white;
                                 }
                             }
 
-
                             .edit_message_button, .edit_comment_button{
-
-                                &:hover{
-                                    .edit_icon{
-                                        background-position: -42px 0px;
-                                    }
-                                }
                                 .edit_icon{
                                     background-image: url("../images/the_wall_sprite_icon.svg");
                                     background-position: 0px 0px;
@@ -285,29 +261,23 @@ body{
                                     width: 12px;
                                 }
                             }
-    
+
                             .delete_item_container{
                                 align-items: center;
                                 background: #32333C;
-                                border-radius: 4px;
-                                border: 1px solid transparent;
+                                border-radius: 4px;  
                                 display: flex;
                                 justify-content: space-between;
                                 margin-left: 6px;
 
                                 .delete_message_button, .delete_comment_button{
 
-                                    &:hover{
-                                        .delete_icon{
-                                            background-position: -63px 0px;
-                                        }
-                                    }
                                     .delete_icon{
                                         background-image: url("../images/the_wall_sprite_icon.svg");
                                         background-position: -21px 0px;
                                         background-repeat: no-repeat;
                                         height: 12px;
-                                        width: 12px;
+                                        width: 12px; 
                                     }
                                 }
 
@@ -322,28 +292,28 @@ body{
                                         border-left: none;
                                         border-radius: 4px 0px 0px 4px;
                                         border-top: none;
+                                        height: 27px;
                                     }
                                 }
-    
+
                                 .delete_message_form{
                                     display: none;
-                                    padding: 8px;
-                                    
+                                    padding: 5px 8px;
+
                                     span{
                                         color: @white;
-                                        font-family: 'Roboto-Bold';
+                                        font-family: 'Roboto-Regular';
                                         font-size: 10px;
                                         line-height: 12px;
                                     }
-    
+
                                     button{
+                                        color: #6D7186;
                                         font-family: 'Roboto-Bold';
                                         font-size: 10px;
                                         line-height: 12px;
                                         margin-left: 8px;
-                                        &[type="button"]{
-                                            color: #6D7186;
-                                        }
+
                                         &[type="submit"]{
                                             color: @purple;
                                         }
@@ -352,21 +322,23 @@ body{
                             }
                         }
                     }
-    
+
                     .create_comment_form{
                         margin-left: 15px;
+                        textarea{
+                            font-size: 16px;
+                            line-height: 25px;
+                        }
                     }
-    
+
                     .comments_list{
                         list-style: none;
                         margin: 0px;
-                        padding: 0px 0px 0px 15px;
-
+                        padding: 0px;
                         li{
                             border-bottom: 1px solid #3F404A;
-                            border-radius: 0px;
-                            margin: 0px;
-                            padding: 24px 0px 25px 0px;
+                            padding: 25px 0px;
+                            margin: 0px 0px 0px 16px;
 
                             &:last-child{
                                 border: none;
@@ -381,145 +353,96 @@ body{
                 }
             }
         }
-    }
-}
 
-@media only screen and (max-width: 1030px){
-    body{
-        main, header{
-            padding: 0px 25px;
-            width: 1035px;
-        }
     }
+
 }
 
 
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 375px) {
+
     body{
+        padding: 0px 26px;
         header{
-            padding: 3px 20px;
-            width: ~"calc(100% - 40px)";
-            p{
-                span{
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: ~"calc(100% - 50px)";
+            div{
+                >span{
                     display: none;
                 }
-
+    
                 a{
-                    padding-left: 0px;
-                    margin: 0px;
 
                     &:before{
-                        display: none;
+                        left: -1px;
                     }
+                    span{
 
-                    .logout_icon{
-                        margin-right: 0px !important;
+                        &.logout_icon{
+                            margin-right: 0px;
+                        }
+                        &:last-child{
+                            display: none;
+                        }
                     }
                 }
             }
         }
 
         main{
-            padding: 0px;
-            width: ~"calc(100% - 70px)";
-            margin: 32px auto;
+            margin-top: 111px;
+            width: 100%;
 
-            h4{
-                font-size: 20px;
-                line-height: 23px;
-                margin: 0px 0px 5px 0px;
-            }
-
-            h1{
-                font-size: 16px;
-                line-height: 19px;
-                margin: 0px 0px 17px 0px;
-            }
 
             #create_message_form, .create_comment_form, .update_message_form{
-                margin-left: 0px !important;
                 textarea{
-                    font-size: 14px;
-                    line-height: 25px;
-                    height: 89px;
+                    height: 156px;
                 }
-
                 button{
-                    top: 63px;
+                    bottom: 20px;
+                    top: auto;
                 }
             }
 
             #recent_forums_container{
-                margin-top: 23px;
-                h5{
-                    margin: 0px 0px 9px 0px;
-                }
-
                 #messages_list{
                     li{
-                        padding: 17px 20px 18px 20px;
-
                         p{
-                            font-size: 14px;
-                            line-height: 18px;
+                            margin-bottom: 16px;
                         }
-
                         .item_footer{
-                            height: auto;
-                            margin-bottom: 13px;
-                            
-
-                           
                             .author_details{
                                 display: flex;
                                 flex-direction: column;
 
                                 span{
-                                    &:after{
-                                        display: none;
-                                    }
-
+                                    
                                     &:first-child{
-                                        font-size: 12px;
-                                        line-height: 14px;
-                                        margin-right: 0px;
-                                    }
-
-                                    &:last-child{
-                                        font-size: 10px;
-                                        line-height: 12px;
+                                        margin-bottom: 5px;
+                                        &:after{
+                                            display: none;
+                                        }
                                     }
                                 }
                             }
-
-                            .actions_container{
-                                display: flex;
-                            }
-                        }   
+                        }
+                        .create_comment_form{
+                            margin-left: 0px;
+                        }
 
                         .comments_list{
-                            padding: 0px 0px 0px 10px;
-
                             li{
-                                padding: 13px 0px 7px 0px;
-
-                                .item_footer{
-                                    align-items: start;
-
-                                    .author_details{
-                                        font-size: 12px;
-                                        line-height: 14px;
-                                        margin-right: 0px;
-                                        margin-top: 5px;
-                                    }
+                                p{
+                                    margin-bottom: 0px;
                                 }
                             }
                         }
                     }
                 }
             }
-
         }
     }
+    
 }
-

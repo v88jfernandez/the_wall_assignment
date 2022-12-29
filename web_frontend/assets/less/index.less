@@ -1,5 +1,5 @@
-@import "global.less";
-@import "variables.less";
+@import url("variables.less");
+@import url("global.less");
 
 body{
     #sign_in_up_container{
@@ -14,10 +14,11 @@ body{
 
         .left_container{
             flex: 1;
-            padding: 75px 78px 71px 78px;
-
+            padding: 75px 78px 75px 78px;
             #form_header{
-                margin-bottom: 43px;
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 50px;
                 padding-left: 77px;
                 position: relative;
                 img{
@@ -32,28 +33,33 @@ body{
                     font-size: 21px;
                     line-height: 25px;
                     margin: 0px 0px 4px 0px;
+                    width: 100%;
                 }
 
-                h6{
+                h1{
                     color: #6D7186;
                     font-family: 'Roboto-Regular';
                     font-size: 17.5108px;
                     line-height: 21px;
-                    margin: 0px;
+                    margin: 0px 0px 0px 0px;
+                    width: 100%;
                 }
-            }
+            }   
 
             form{
                 .form_group{
+                    display: flex;
+                    flex-wrap: wrap;
                     margin-bottom: 18px;
+
                     label{
-                        font-family: 'Roboto-Medium';
                         color: #6D7186;
+                        font-family: 'Roboto-Medium';
                         font-size: 14px;
                         line-height: 16px;
-                        display: flex;
                         margin-bottom: 9px;
                     }
+
                     input{
                         background: #31354F;
                         border-radius: 9px;
@@ -62,14 +68,17 @@ body{
                         font-family: 'Roboto-Regular';
                         font-size: 16px;
                         font-style: normal;
+                        font-weight: 400;
                         height: 56px;
                         line-height: 16px;
                         outline: none;
                         width: 100%;
                     }
                 }
+
                 .form_group_container{
                     display: flex;
+
                     .form_group{
                         flex: 1;
 
@@ -81,9 +90,10 @@ body{
                             margin-left: 7.5px;
                         }
                     }
+
                 }
 
-                >button{
+                button[type="submit"]{
                     height: 60px;
                     margin-top: 13px;
                     width: 100%;
@@ -97,21 +107,20 @@ body{
                     margin: 37px auto 0px auto;
                     text-align: center;
 
-                    button{
+                    button[type="button"]{
                         color: @blue;
                         font-family: 'Roboto-Regular';
                         font-size: 17.5108px;
                         line-height: 21px;
                     }
                 }
-
             }
         }
 
         .right_container{
             background-color: #3B3C43;
             background-image: url("../images/right_panel_sign_up_in.svg");
-            background-position: -39px -53px;
+            background-position: -39px -54px;
             background-repeat: no-repeat;
             border-radius: 0px 20px 20px 0px;
             position: relative;
@@ -123,47 +132,5 @@ body{
                 top: 75px;
             }
         }
-
-    }
-}
-
-@media only screen and (max-width: 910px){
-    body{
-        padding: 50px;
-        #sign_in_up_container{
-            width: 100%;
-            position: unset;
-            transform: unset;
-            .right_container{
-                display: none;
-            }
-       }
-    }
-}
-
-
-@media only screen and (max-width: 550px){
-    body{
-        #sign_in_up_container{
-            .left_container{
-                padding: 50px;
-                form{
-                    .form_group_container{
-                        flex-direction: column;
-                    }
-                }
-            }
-       }
-    }
-}
-
-@media only screen and (max-width: 415px){
-    body{
-        padding: 20px;
-        #sign_in_up_container{
-            .left_container{
-                padding: 20px;
-            }
-       }
     }
 }

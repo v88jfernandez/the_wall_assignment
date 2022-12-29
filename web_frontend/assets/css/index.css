@@ -1,3 +1,17 @@
+/* Fonts */
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("../fonts/Roboto/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../fonts/Roboto/Roboto-Bold.ttf");
+}
+/* Colors */
 body {
   background-color: #2C2D34;
   margin: 0px;
@@ -10,10 +24,13 @@ body .primary_button {
   border-radius: 9px;
   border: none;
   color: #ffffff;
-  font-family: 'Roboto-Bold';
+  font-family: "Roboto-Bold";
   font-size: 21px;
   line-height: 25px;
   outline: none;
+}
+body .primary_button:hover {
+  background-color: #0050C8;
 }
 body .normal_button {
   background-color: transparent;
@@ -29,25 +46,10 @@ body button {
 }
 body input {
   padding: 0px 20px;
-  width: calc(100% - 42px) !important;
 }
 body input:focus {
   border: 1px solid #00a3ff !important;
 }
-/* Fonts */
-@font-face {
-  font-family: "Roboto-Regular";
-  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Roboto-Medium";
-  src: url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Roboto-Bold";
-  src: url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
-}
-/* Colors */
 body #sign_in_up_container {
   background: #1D1F2B;
   border-radius: 20px;
@@ -60,10 +62,12 @@ body #sign_in_up_container {
 }
 body #sign_in_up_container .left_container {
   flex: 1;
-  padding: 75px 78px 71px 78px;
+  padding: 75px 78px 75px 78px;
 }
 body #sign_in_up_container .left_container #form_header {
-  margin-bottom: 43px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
   padding-left: 77px;
   position: relative;
 }
@@ -78,23 +82,26 @@ body #sign_in_up_container .left_container #form_header h5 {
   font-size: 21px;
   line-height: 25px;
   margin: 0px 0px 4px 0px;
+  width: 100%;
 }
-body #sign_in_up_container .left_container #form_header h6 {
+body #sign_in_up_container .left_container #form_header h1 {
   color: #6D7186;
   font-family: 'Roboto-Regular';
   font-size: 17.5108px;
   line-height: 21px;
-  margin: 0px;
+  margin: 0px 0px 0px 0px;
+  width: 100%;
 }
 body #sign_in_up_container .left_container form .form_group {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 18px;
 }
 body #sign_in_up_container .left_container form .form_group label {
-  font-family: 'Roboto-Medium';
   color: #6D7186;
+  font-family: 'Roboto-Medium';
   font-size: 14px;
   line-height: 16px;
-  display: flex;
   margin-bottom: 9px;
 }
 body #sign_in_up_container .left_container form .form_group input {
@@ -105,6 +112,7 @@ body #sign_in_up_container .left_container form .form_group input {
   font-family: 'Roboto-Regular';
   font-size: 16px;
   font-style: normal;
+  font-weight: 400;
   height: 56px;
   line-height: 16px;
   outline: none;
@@ -122,7 +130,7 @@ body #sign_in_up_container .left_container form .form_group_container .form_grou
 body #sign_in_up_container .left_container form .form_group_container .form_group:last-child {
   margin-left: 7.5px;
 }
-body #sign_in_up_container .left_container form > button {
+body #sign_in_up_container .left_container form button[type="submit"] {
   height: 60px;
   margin-top: 13px;
   width: 100%;
@@ -135,7 +143,7 @@ body #sign_in_up_container .left_container form p {
   margin: 37px auto 0px auto;
   text-align: center;
 }
-body #sign_in_up_container .left_container form p button {
+body #sign_in_up_container .left_container form p button[type="button"] {
   color: #00a3ff;
   font-family: 'Roboto-Regular';
   font-size: 17.5108px;
@@ -144,7 +152,7 @@ body #sign_in_up_container .left_container form p button {
 body #sign_in_up_container .right_container {
   background-color: #3B3C43;
   background-image: url("../images/right_panel_sign_up_in.svg");
-  background-position: -39px -53px;
+  background-position: -39px -54px;
   background-repeat: no-repeat;
   border-radius: 0px 20px 20px 0px;
   position: relative;
@@ -154,33 +162,4 @@ body #sign_in_up_container .right_container img {
   left: 51px;
   position: absolute;
   top: 75px;
-}
-@media only screen and (max-width: 910px) {
-  body {
-    padding: 50px;
-  }
-  body #sign_in_up_container {
-    width: 100%;
-    position: unset;
-    transform: unset;
-  }
-  body #sign_in_up_container .right_container {
-    display: none;
-  }
-}
-@media only screen and (max-width: 550px) {
-  body #sign_in_up_container .left_container {
-    padding: 50px;
-  }
-  body #sign_in_up_container .left_container form .form_group_container {
-    flex-direction: column;
-  }
-}
-@media only screen and (max-width: 415px) {
-  body {
-    padding: 20px;
-  }
-  body #sign_in_up_container .left_container {
-    padding: 20px;
-  }
 }

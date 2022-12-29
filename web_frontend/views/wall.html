@@ -13,10 +13,15 @@
     <link rel="stylesheet" href="../assets/css/wall.css"/>
 </head>
 <body>
- 
     <header>
         <a href="wall.html"><span class="the_wall_logo"></span> THE WALL</a>
-        <p><span>Jerwin Fernandez</span> <a href="index.html"><span class="logout_icon"></span> <span>Logout</span></a></p>
+        <div>
+            <span>Jerwin Fernandez</span>
+            <a href="index.html">
+                <span class="logout_icon"></span>
+                <span>Logout</span>
+            </a>
+        </div>
     </header>
 
     <main>
@@ -31,23 +36,22 @@
         <div id="recent_forums_container">
             <h5>Recent Forums</h5>
 
-            <!-- No post placeholder -->
+            <!-- No Post Placeholder -->
             <div id="no_post_yet">No post yet.</div>
-
+            
             <ul id="messages_list"></ul>
         </div>
     </main>
-
+ 
     <!-- Clones -->
     <div class="hidden">
         <ul id="clones_list">
             <!-- Message Clone -->
             <li data-message-id="0">
                 <p>This is a test message!</p>
-
                 <div class="item_footer">
                     <div class="author_details">
-                        <span>Jerwin F. (few seconds ago)</span>
+                        <span>Jerwin F. (few sec ago)</span>
                         <span class="responses">0 Responses</span>
                     </div>
 
@@ -55,6 +59,7 @@
                         <button type="button" class="edit_message_button">
                             <span class="edit_icon"></span>
                         </button>
+
                         <div class="delete_item_container">
                             <button type="button" class="delete_message_button">
                                 <span class="delete_icon"></span>
@@ -66,12 +71,12 @@
                                 <button type="submit" class="normal_button">Yes</button>
                             </form>
                         </div>
-                    </div> 
+                    </div>
                 </div>
 
                 <form action="#" method="post" class="create_comment_form">
-                    <textarea name="comment" placeholder="Post your Topic..."></textarea>
-                    <button type="submit" class="primary_button">Post</button>
+                    <textarea name="comment" placeholder="Post your response..."></textarea>
+                    <button type="submit" class="primary_button">Comment</button>
                 </form>
 
                 <ul class="comments_list"></ul>
@@ -81,12 +86,13 @@
                 <p>This is a test comment!</p>
 
                 <div class="item_footer">
-                    <span class="author_details">Jerwin F. (few seconds ago)</span>
+                    <span class="author_details">Jerwin F. (few sec ago)</span>
 
                     <div class="actions_container">
                         <button type="button" class="edit_comment_button">
                             <span class="edit_icon"></span>
                         </button>
+
                         <div class="delete_item_container">
                             <button type="button" class="delete_comment_button">
                                 <span class="delete_icon"></span>
@@ -98,11 +104,12 @@
                                 <button type="submit" class="normal_button">Yes</button>
                             </form>
                         </div>
-                    </div> 
-                </div> 
+                    </div>
+                </div>
             </li>
         </ul>
 
+        <!-- Update Message Form -->
         <form action="#" method="post" class="update_message_form">
             <textarea name="message" placeholder="Update your Topic..."></textarea>
             <button type="submit" class="primary_button">Save</button>

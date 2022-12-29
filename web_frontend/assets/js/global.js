@@ -1,8 +1,7 @@
-
 /**
 * DOCU: This will validate the input. <br>
-* Triggered: index and dashboard.js
-* Last Updated: November 21, 2022
+* Triggered: index and wall.js
+* Last Updated: December 29, 2022
 * @function
 * @memberOf global.js
 * @param {object} input = requires to get the selector/target.
@@ -19,13 +18,13 @@ validateInput = (input) => {
 
 /**
 * DOCU: This will generate random number for prototyping <br>
-* Triggered: dashboard.js
-* Last Updated: November 21, 2022
+* Triggered: wall.js
+* Last Updated: December 29, 2022
 * @function
 * @memberOf global.js
 * @param {object} input = requires to get the selector/target.
 * @author Jerwin
 */ 
-generateRandom = () => {
-    return Math.floor(Date.now() + Math.random());
+generateRandomId = () => {
+    return Date.now() + Math.random();
 }
